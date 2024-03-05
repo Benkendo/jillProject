@@ -1,0 +1,97 @@
+
+
+:root{
+    --study-library-foreground-color: #455a64;
+    --study-library-link-color: #3740ff;
+    --study-library-nav-text-color: #f8f9fa;
+    --study-library-border: #d2d3d7;
+}
+.footer-content{
+   width: 100%;
+   height: max-content;
+   border-top: 1px solid var(--study-library-border);
+   margin-top: 3rem;
+   padding: 1rem;
+
+   display: flex;
+   gap: 2rem;
+    color: #455a64;
+}
+
+.footer-left-content{
+    width: 25rem;
+}
+
+
+.footer-right-content{
+    margin-left: 2rem;
+    display: flex;
+    gap: 5rem;
+    flex-direction: row;
+
+}
+
+.donate{
+    line-height: 1.8;
+}
+
+.title-span{
+    display: block;
+    cursor: pointer;
+    color: rgba(255, 140, 0, 1);
+    font-size: 1.2rem;
+    transition: all .3s ease-in-out;    
+}
+
+.title-span:hover{
+    font-weight: 700;
+    border-bottom: 2px solid var(--study-library-foreground-color);
+
+}
+
+.related-content > ul li{
+    list-style-type: none;
+}
+
+.list-title{
+    color: #000;
+    margin-top: -15px;
+
+}
+.li-footer{
+    line-height: 1.7;
+    color: var(--study-library-foreground-color);
+    transition: all .5s ease-in-out;
+}
+
+
+.li-footer:hover{
+    color: blue;
+    cursor: pointer;
+     border-bottom: 2px solid var(--study-library-link-color);
+}
+
+
+.connect{
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

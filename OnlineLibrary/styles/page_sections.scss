@@ -1,0 +1,97 @@
+.page-section{
+    height: max-content;
+    position: relative;
+
+}
+
+:root{
+    --grid-container-border-color:rgba(0, 128, 0, .7);
+    --btn-background-color:#3740ff;
+    --study-library-border: #d2d3d7;
+}
+.page-content{
+     width: 100%;
+     position: relative;
+     justify-self: center;
+     align-items: center;
+     display: flex;
+     flex-direction: column;
+     gap: 4rem;
+
+     // page introduction css
+     .page-content-top{
+        // gap: 1rem;
+        width: 50vw;
+        // clear: both;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .page-introduction{
+            text-align: center;
+            line-height: 1.2;
+        }
+     }
+}
+
+// containers for grid
+
+.page-container-content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+}
+.course-container{
+    position: relative;
+    width: 25rem;
+    height: 25rem;
+    border: 1px solid var(--study-library-border);
+    border-radius: 5px;
+    padding: 5px;
+    // padding-bottom: 3rem;
+
+
+    .grid-container-title{
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 8rem;
+
+        span{
+            display: block;
+            background: linear-gradient(45deg, #c90eb0,#0000ff, #04eb6c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+    }
+    .para-description{
+        // text-align: center;
+    }
+    .study-course{
+        background-color: var(--btn-background-color);
+        width: max-content;
+        padding: 5px;
+        font-size: 1.2rem;
+        border-radius: 5px;
+
+    }
+    .start-course-link{
+        position: absolute;
+        // background-color: green;
+        padding: 5px;
+        color: var(--btn-background-color);
+        bottom: 10px;
+        text-decoration: none;
+        // color: #fff;
+        font-size: 1.3rem;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+}
+.course-container:hover{
+    background-color: var(--study-library-border);
+}

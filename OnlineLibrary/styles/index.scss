@@ -1,0 +1,203 @@
+
+
+:root{
+    --study-library-body-background: #fff;
+    --study-library-nav-text-color: #f8f9fa;
+    --study-library-page-box-shadow: none;
+    --study-library-link-text-decoration-hover: underline;
+
+    --study-library-link-color: #3740ff;
+    --study-library-border: #d2d3d7;
+    --study-library-header-lower-box-shadow: 0 1px #d2d3d7;
+    --study-library-upper-tab-marker-color: #6001ff;
+    --study-library-upper-tab-marker-color-inactive: #6001ff;
+    --study-library-card-border-radius: 10px;
+    --study-library-card-border: 1px solid #d2d3d7;
+    --study-library-button-background-hover: #f8faff;
+    --study-library-button-primary-box-shadow-hover: none;
+    --study-library-primary-text-color: #202124;
+    --study-library-progress-bar-color: #f9ab00;
+    --study-library-foreground-color: #455a64;
+    --study-library-primary-text-color: #202124;
+}   
+
+
+
+:root{
+    --nav-logo-items-color-on-hover: rgba(0, 0, 0, 0.7);
+    --nav-items-hover-color:rgba(0, 0, 0, 0.6);
+}
+body{
+    background-color: var(--study-library-body-background);
+    padding: 0;
+    margin: 0;
+}
+
+
+.main-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+}
+// navigation bar
+.navigation{
+    grid-column: span 4;
+    height: 4rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff; /* Adjust background color as needed */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visibility */
+    z-index: 1000; /* Ensure it's above other content */
+    // margin-top: 10px;
+    
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// navigation starting from here navigation items 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+.nav-content{
+    position: relative;
+    margin: 0 2rem;
+    top: 50%;
+}
+
+// library name
+.library-icon{
+    font-size: 1.3rem;
+    cursor: pointer;
+
+    .fa-book{
+        margin-right: .3rem;
+        color: var(--study-library-link-color);
+    }
+}
+.nav-content-items{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+li.nav-item > a{
+    cursor: pointer;
+    color: var(--nav-items-hover-color);
+    text-decoration: none;
+    transition: color .3s ease;
+    font-size: initial;
+} 
+li > a:hover{
+    color: #000;
+}
+
+.navigation-items{
+    display: flex;
+    gap: 2rem;
+    margin-top: -1px;
+
+    li.nav-item{
+        list-style-type: none;
+        cursor: pointer;
+
+    }
+}
+
+// active page
+.active-page{
+    border-bottom: 2px solid var(--study-library-link-color);
+    padding-bottom: 14px;
+}
+// /////////////////////////////////////////////////////
+// end of center content list items  //////////////////
+///////////////////////////////////////////////////////
+
+.main-content{
+    grid-column:  span 4;
+    height: max-content;
+    // background-color: #3740ff;
+    margin-top: 4rem;
+}
+
+.footer-container{
+    grid-column: span 4;
+    // background-color: #3740ff;
+    height: 10rem;
+}
+
+//////////////////////////////////////////////////////// css for search box  ///////////////////////////////////
+
+div[class='search-box']{
+    position: relative;
+    width: max-content;
+    background-color: var(--study-library-border);
+    margin-top: -10px; 
+    display: flex;
+    height: 2.3rem;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1rem;
+    border-radius: 5px;
+
+    input.search-box{
+        position: relative;
+        border: none;
+        background-color: var(--study-library-border);
+        outline: none;
+        font-size: 1.1rem;
+        margin: 10px;
+        color: rgba(0, 0, 0, 0.8)
+
+    };
+    .search-term-icon{
+        color: rgba(0, 0, 0, 0.6);
+    }
+}
+
+////////////////////////////////////////////////////////
+
+.right-nav-content{
+    .page-language{
+        display: flex;
+        gap: 1rem;
+
+        .lang-container{
+            position: relative;
+            border: 1px solid var(--study-library-border);
+            padding: 5px 6px ;
+            // padding-right: 20px;
+            margin-top: -5px;
+
+            .choose-lang-icon{
+                font-size: .7rem;
+                transform: rotate(90deg);
+                color: var(--nav-items-hover-color);
+                margin-left: 5px;
+
+            }
+        }
+
+    }
+}
+.lang-container:hover{
+    background-color: var(--study-library-border);
+    cursor: pointer;
+    
+    .fa-greater-than{
+        color: #000;
+    }
+}
+
+div.sign-in{
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #000;
+    transition: all .3s ease;
+}
+div.sign-in:hover{
+    color: var(--study-library-link-color);
+}
+
+
+
+
